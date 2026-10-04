@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusConnect</title>
+    <link rel ="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+    <h2>CampusConnect</h2>
+    <div>
+        <a href ="#home">Home</a>
+        <a href ="#events">Events</a>
+        <a href ="#clubs">Clubs</a>
+        <a href ="#about">About</a>
+    </div>
+    </nav>
+
+    <section class="hero"  id="home">
+        <div class="hero-content">
+            <h1>Connect. Explore. Grow</h1>
+            <p>
+               Discover events, clubs, workshops and opportunities
+               happening around your campus. 
+            </p>
+            <button onclick="document.getElementById('events').scrollIntoView()" >Explore Events</button>
+        </div>
+    </section>
+
+    <section class ="events"  id="events">
+        <h2>Upcoming Events</h2>
+        <div class="event-search">
+            <input type="text" id="searchInput" placeholder="Search events...">
+       </div>
+
+       <div class="events-filters">
+             <button class="filter-btn active" data-filter="all">All</button>
+             <button class="filter-btn" data-filter="tech">Tech</button>
+             <button class="filter-btn" data-filter="cultural">Cultural</button>
+             <button class="filter-btn" data-filter="sports">Sports </button>
+       </div>       
+
+       <div class="event-container">      
+        </div>
+    </section>
+
+    <section class ="clubs"  id="clubs">
+        <h2>Explore Our Clubs</h2>
+        <div class="club-container">
+            
+        </div>
+    </section>
+
+    <section class="about" id="about">
+
+    <div class="about-content">
+
+        <h2>About CampusConnect</h2>
+
+        <p class="about-intro">
+            Campus life is full of opportunities, but finding the right
+            events, clubs and activities can sometimes be difficult.
+            CampusConnect brings them together in one simple platform.
+        </p>
+
+        <div class="about-features">
+
+            <div class="about-card">
+                <div class="about-icon">🎯</div>
+                <h3>Discover Events</h3>
+                <p>
+                    Find upcoming workshops, hackathons, cultural events
+                    and sports activities happening on campus.
+                </p>
+            </div>
+
+            <div class="about-card">
+                <div class="about-icon">👥</div>
+                <h3>Explore Clubs</h3>
+                <p>
+                    Discover student clubs and find communities that
+                    match your interests and goals.
+                </p>
+            </div>
+
+            <div class="about-card">
+                <div class="about-icon">🚀</div>
+                <h3>Grow & Participate</h3>
+                <p>
+                    Take part in campus activities, learn new skills
+                    and connect with other students.
+                </p>
+            </div>
+
+        </div>
+
+        <h3 class="how-title">How CampusConnect Works</h3>
+
+        <div class="steps">
+
+            <div class="step">
+                <span>1</span>
+                <h3>Discover</h3>
+                <p>Browse events and clubs available on campus.</p>
+            </div>
+
+            <div class="step">
+                <span>2</span>
+                <h3>Explore</h3>
+                <p>View details and find opportunities that interest you.</p>
+            </div>
+
+            <div class="step">
+                <span>3</span>
+                <h3>Participate</h3>
+                <p>Join activities and make your campus experience better.</p>
+            </div>
+
+          </div>
+
+      </div>
+
+    </section>
+
+    <div class="modal" id="clubModal">
+      <div class="modal-content">
+        <button class="close-modal" id="closeClubModal">&times;</button>
+        <h2 id="clubModalTitle"></h2>
+        <p id="clubModalCategory"></p>
+        <p id="clubModalDescription"></p>
+        <p id="clubModalFocus"></p>
+        <p id="clubModalInfo">  Explore the club, meet students and participate in activities.</p>
+      </div>
+    </div>
+
+    <div class="modal" id="eventModal">
+
+       <div class="modal-content">
+           <button class="close-modal" id="closeModal">&times;</button>
+           <h2 id="modalTitle"></h2>
+           <p id="modalDate"></p>
+           <p id="modalCategory"></p>
+           <p id="modalLocation"></p>
+           <p id="modalDescription"></p>
+          <button id="calendarBtn">Add to Calendar</button>
+       
+
+    <div class="registration">
+    <h3>Register for this Event</h3>
+
+    <input
+        type="text"
+        id="studentName"
+        placeholder="Enter your name"
+    >
+
+    <input
+        type="email"
+        id="studentEmail"
+        placeholder="Enter your email"
+    >
+
+    <button id="registerBtn">Register</button>
+
+    <p id="registrationMessage"></p>
+    </div>
+    </div>
+    </div>
+
+    <script src ="script.js"></script>
+</body>
+</html>
